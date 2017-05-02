@@ -10,16 +10,37 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var topToolBar: UIToolbar!
+    @IBOutlet weak var shareButtonOutlet: UIBarButtonItem!
+    
+    @IBOutlet weak var bottomToolBar: UIToolbar!
+    @IBOutlet weak var cameraButtonOutlet: UIBarButtonItem!
+    
+    @IBOutlet weak var pictureView: UIImageView!
+    
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var bottomTextfield: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func shareButton(_ sender: Any) {
+    }
+    
+    @IBAction func cancelButton(_ sender: Any) {
     }
 
-
+    @IBAction func cameraButton(_ sender: Any) {
+    }
+    
+    @IBAction func albumButton(_ sender: Any) {
+    }
+    
 }
 
