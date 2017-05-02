@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMeV1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMeV1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -56,14 +56,14 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Olh-sB-eDi"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D2i-W3-gCo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D2i-W3-gCo">
                                 <rect key="frame" x="16" y="164" width="343" height="359"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7mA-Le-f3u">
-                                <rect key="frame" x="62.5" y="103" width="250" height="40"/>
+                                <rect key="frame" x="62.5" y="104" width="250" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xt6-zb-cg2">
                                 <rect key="frame" x="62.5" y="543" width="250" height="40"/>
@@ -73,11 +73,12 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="7mA-Le-f3u" firstAttribute="top" secondItem="zJ4-I0-XTw" secondAttribute="bottom" constant="40" id="05B-K9-2RX"/>
                             <constraint firstAttribute="trailing" secondItem="SJL-xx-e9H" secondAttribute="trailing" id="2Vs-qD-Y77"/>
                             <constraint firstItem="SJL-xx-e9H" firstAttribute="top" secondItem="D2i-W3-gCo" secondAttribute="bottom" constant="100" id="4u2-FQ-28F"/>
                             <constraint firstItem="D2i-W3-gCo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8Jx-7C-VH4"/>
@@ -93,7 +94,6 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SJL-xx-e9H" secondAttribute="bottom" id="eF6-5P-8v3"/>
                             <constraint firstItem="zJ4-I0-XTw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jaN-tu-KJJ"/>
                             <constraint firstItem="7mA-Le-f3u" firstAttribute="height" secondItem="xt6-zb-cg2" secondAttribute="height" id="kwy-Cv-ouR"/>
-                            <constraint firstItem="xt6-zb-cg2" firstAttribute="top" secondItem="7mA-Le-f3u" secondAttribute="bottom" constant="400" id="unk-mm-5Ob"/>
                         </constraints>
                     </view>
                     <connections>
