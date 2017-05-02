@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="tableView" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -97,6 +97,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="allViews" destination="8bC-Xf-vdC" id="U6m-fM-mzD"/>
                         <outlet property="bottomTextfield" destination="xt6-zb-cg2" id="6re-l2-ZVH"/>
                         <outlet property="bottomToolBar" destination="SJL-xx-e9H" id="qjd-TO-Kej"/>
                         <outlet property="cameraButtonOutlet" destination="PNQ-wV-2nj" id="Ewm-gD-iit"/>
