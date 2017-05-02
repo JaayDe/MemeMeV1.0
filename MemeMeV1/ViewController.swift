@@ -27,13 +27,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
     
     let memeTextAttributes:[String:Any] = [NSStrokeColorAttributeName: UIColor.black, NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!, NSStrokeWidthAttributeName: "3.0"]
     
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         
         topTextField.delegate = self
         bottomTextfield.delegate = self
         
+        // textfield-texts and image are set
         initialSetup()
         
         let textfields = [topTextField, bottomTextfield]
@@ -76,12 +76,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
         }
         
         present(controller, animated: true, completion: nil)
-        
     }
     
     @IBAction func cancelButton(_ sender: Any) {
         initialSetup()
-        
     }
 
     @IBAction func cameraButton(_ sender: Any) {
