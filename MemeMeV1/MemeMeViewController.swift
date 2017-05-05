@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeMeViewController.swift
 //  MemeMeV1
 //
 //  Created by Johannes Dierkes on 02.05.17.
@@ -9,8 +9,8 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextFieldDelegate, UINavigationControllerDelegate {
-
+class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, UITextFieldDelegate, UINavigationControllerDelegate {
+    
     
     @IBOutlet var allViews: UIView!
     
@@ -25,7 +25,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextfield: UITextField!
     
-    let memeTextAttributes:[String:Any] = [NSStrokeColorAttributeName: UIColor.black, NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!, NSStrokeWidthAttributeName: "3.0"]
+    let memeTextAttributes:[String:Any] = [NSStrokeColorAttributeName: UIColor.black, NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!, NSStrokeWidthAttributeName: "-3.0"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +44,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
         shareButtonOutlet.isEnabled = false
         
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         // disable camera-Button, as no camera is available in Simulator
         cameraButtonOutlet.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         
@@ -68,9 +68,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
         
         controller.completionWithItemsHandler = {
             activity, completed, items, error in
-            self.save()
-            self.initialSetup()
-            self.dismiss(animated: true, completion: nil)
+            if completed {
+                self.save()
+                self.initialSetup()
+                self.dismiss(animated: true, completion: nil)
+            }
         }
         
         present(controller, animated: true, completion: nil)
@@ -79,7 +81,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
     @IBAction func cancelButton(_ sender: Any) {
         initialSetup()
     }
-
+    
     @IBAction func cameraButton(_ sender: Any) {
         pickerShortcut(source: .camera)
     }
@@ -93,7 +95,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
         albumPicker.delegate = self
         albumPicker.sourceType = source
         self.present(albumPicker, animated: true, completion: nil)
-        shareButtonOutlet.isEnabled = true
     }
     
     // assign selected image to PictureView
@@ -106,8 +107,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
         
         dismiss(animated: true, completion: nil)
     }
-    
-    
     
     // editing of textfields
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -151,7 +150,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
         
         return keyboardSize.cgRectValue.height
     }
- 
+    
     // generate Memed Image
     func generateMemedImage() -> UIImage {
         topToolBar.isHidden = true
