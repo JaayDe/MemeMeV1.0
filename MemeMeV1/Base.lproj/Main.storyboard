@@ -22,6 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D2i-W3-gCo">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJ4-I0-XTw" userLabel="TopToolbar">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
@@ -56,16 +59,13 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Olh-sB-eDi"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D2i-W3-gCo">
-                                <rect key="frame" x="16" y="164" width="343" height="359"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7mA-Le-f3u">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7mA-Le-f3u">
                                 <rect key="frame" x="62.5" y="104" width="250" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xt6-zb-cg2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xt6-zb-cg2">
                                 <rect key="frame" x="62.5" y="543" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7If-Yg-aGk"/>
@@ -80,20 +80,20 @@
                         <constraints>
                             <constraint firstItem="7mA-Le-f3u" firstAttribute="top" secondItem="zJ4-I0-XTw" secondAttribute="bottom" constant="40" id="05B-K9-2RX"/>
                             <constraint firstAttribute="trailing" secondItem="SJL-xx-e9H" secondAttribute="trailing" id="2Vs-qD-Y77"/>
-                            <constraint firstItem="SJL-xx-e9H" firstAttribute="top" secondItem="D2i-W3-gCo" secondAttribute="bottom" constant="100" id="4u2-FQ-28F"/>
-                            <constraint firstItem="D2i-W3-gCo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8Jx-7C-VH4"/>
+                            <constraint firstItem="D2i-W3-gCo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Ed-Lt-exJ"/>
                             <constraint firstItem="zJ4-I0-XTw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8aM-6E-HO8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="D2i-W3-gCo" secondAttribute="trailing" id="Bfu-wC-qmo"/>
-                            <constraint firstItem="D2i-W3-gCo" firstAttribute="top" secondItem="zJ4-I0-XTw" secondAttribute="bottom" constant="100" id="GfA-5J-Rnd"/>
                             <constraint firstAttribute="trailing" secondItem="zJ4-I0-XTw" secondAttribute="trailing" id="LQx-aK-17Z"/>
                             <constraint firstItem="7mA-Le-f3u" firstAttribute="width" secondItem="xt6-zb-cg2" secondAttribute="width" id="OOq-Jz-NoG"/>
                             <constraint firstItem="SJL-xx-e9H" firstAttribute="top" secondItem="xt6-zb-cg2" secondAttribute="bottom" constant="40" id="PaF-s6-fKu"/>
                             <constraint firstItem="7mA-Le-f3u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uv3-5N-Ybf"/>
                             <constraint firstItem="SJL-xx-e9H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VZA-l7-JMS"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="D2i-W3-gCo" secondAttribute="leading" id="Xb4-af-0kE"/>
                             <constraint firstItem="xt6-zb-cg2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c6s-T9-6SX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SJL-xx-e9H" secondAttribute="bottom" id="eF6-5P-8v3"/>
                             <constraint firstItem="zJ4-I0-XTw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jaN-tu-KJJ"/>
                             <constraint firstItem="7mA-Le-f3u" firstAttribute="height" secondItem="xt6-zb-cg2" secondAttribute="height" id="kwy-Cv-ouR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D2i-W3-gCo" secondAttribute="trailing" id="tRW-Aj-6aZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D2i-W3-gCo" secondAttribute="bottom" id="xKT-xy-RcP"/>
                         </constraints>
                     </view>
                     <connections>

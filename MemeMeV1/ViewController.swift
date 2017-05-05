@@ -30,9 +30,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        topTextField.delegate = self
-        bottomTextfield.delegate = self
-        
         // textfield-texts and image are set
         initialSetup()
         
@@ -41,6 +38,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
         for textField in textfields {
             textField?.defaultTextAttributes = memeTextAttributes
             textField?.textAlignment = .center
+            textField?.delegate = self
         }
         
         shareButtonOutlet.isEnabled = false
@@ -83,19 +81,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
     }
 
     @IBAction func cameraButton(_ sender: Any) {
-        let cameraPicker = UIImagePickerController()
-        cameraPicker.delegate = self
-        cameraPicker.sourceType = .camera
-        
-        self.present(cameraPicker, animated: true, completion: nil)
+        pickerShortcut(source: .camera)
     }
     
     @IBAction func albumButton(_ sender: Any) {
+        pickerShortcut(source: .photoLibrary)
+    }
+    
+    func pickerShortcut(source: UIImagePickerControllerSourceType) {
         let albumPicker = UIImagePickerController()
         albumPicker.delegate = self
-        albumPicker.sourceType = .photoLibrary
-        
+        albumPicker.sourceType = source
         self.present(albumPicker, animated: true, completion: nil)
+        shareButtonOutlet.isEnabled = true
     }
     
     // assign selected image to PictureView
@@ -174,6 +172,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UITextF
         topTextField.text = "TOP"
         bottomTextfield.text = "BOTTOM"
         pictureView.image = nil
+        shareButtonOutlet.isEnabled = false
     }
     
     // save meme
