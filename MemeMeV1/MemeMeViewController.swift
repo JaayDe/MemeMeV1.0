@@ -134,7 +134,7 @@ class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func keyboardWillShow(_ notification:Notification) {
         if bottomTextfield.isFirstResponder {
-            allViews.frame.origin.y = getKeyboardHeight(notification) * (-1)
+            allViews.frame.origin.y = -getKeyboardHeight(notification)
         }
     }
     
@@ -156,8 +156,8 @@ class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, U
         topToolBar.isHidden = true
         bottomToolBar.isHidden = true
         
-        UIGraphicsBeginImageContext(self.allViews.frame.size)
-        allViews.drawHierarchy(in: self.allViews.frame, afterScreenUpdates: true)
+        UIGraphicsBeginImageContext(allViews.frame.size)
+        allViews.drawHierarchy(in: allViews.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         

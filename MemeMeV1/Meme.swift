@@ -1,5 +1,5 @@
 //
-//  MemeStruct.swift
+//  Meme.swift
 //  MemeMeV1
 //
 //  Created by Johannes Dierkes on 02.05.17.

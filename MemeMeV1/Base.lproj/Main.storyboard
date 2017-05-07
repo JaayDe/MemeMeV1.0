@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D2i-W3-gCo">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJ4-I0-XTw" userLabel="TopToolbar">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -80,20 +79,20 @@
                         <constraints>
                             <constraint firstItem="7mA-Le-f3u" firstAttribute="top" secondItem="zJ4-I0-XTw" secondAttribute="bottom" constant="40" id="05B-K9-2RX"/>
                             <constraint firstAttribute="trailing" secondItem="SJL-xx-e9H" secondAttribute="trailing" id="2Vs-qD-Y77"/>
-                            <constraint firstItem="D2i-W3-gCo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Ed-Lt-exJ"/>
                             <constraint firstItem="zJ4-I0-XTw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8aM-6E-HO8"/>
                             <constraint firstAttribute="trailing" secondItem="zJ4-I0-XTw" secondAttribute="trailing" id="LQx-aK-17Z"/>
                             <constraint firstItem="7mA-Le-f3u" firstAttribute="width" secondItem="xt6-zb-cg2" secondAttribute="width" id="OOq-Jz-NoG"/>
                             <constraint firstItem="SJL-xx-e9H" firstAttribute="top" secondItem="xt6-zb-cg2" secondAttribute="bottom" constant="40" id="PaF-s6-fKu"/>
+                            <constraint firstItem="SJL-xx-e9H" firstAttribute="top" secondItem="D2i-W3-gCo" secondAttribute="bottom" id="TIx-31-l8g"/>
                             <constraint firstItem="7mA-Le-f3u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uv3-5N-Ybf"/>
                             <constraint firstItem="SJL-xx-e9H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VZA-l7-JMS"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="D2i-W3-gCo" secondAttribute="leading" id="Xb4-af-0kE"/>
+                            <constraint firstAttribute="trailing" secondItem="D2i-W3-gCo" secondAttribute="trailing" id="ZmN-MP-2UP"/>
                             <constraint firstItem="xt6-zb-cg2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c6s-T9-6SX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SJL-xx-e9H" secondAttribute="bottom" id="eF6-5P-8v3"/>
                             <constraint firstItem="zJ4-I0-XTw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jaN-tu-KJJ"/>
                             <constraint firstItem="7mA-Le-f3u" firstAttribute="height" secondItem="xt6-zb-cg2" secondAttribute="height" id="kwy-Cv-ouR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="D2i-W3-gCo" secondAttribute="trailing" id="tRW-Aj-6aZ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D2i-W3-gCo" secondAttribute="bottom" id="xKT-xy-RcP"/>
+                            <constraint firstItem="D2i-W3-gCo" firstAttribute="top" secondItem="zJ4-I0-XTw" secondAttribute="bottom" id="mQZ-b2-yFo"/>
+                            <constraint firstItem="D2i-W3-gCo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tkW-BX-vRF"/>
                         </constraints>
                     </view>
                     <connections>
